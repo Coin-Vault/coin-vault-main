@@ -36,14 +36,19 @@ The programming language used is C# .NET Core 7.0
 - To run the API localy run `dotnet run` in the CLI
 - To run the linter run `dotnet format` in the CLI
 
-## 4. React.js front-end
+## 4. React.js Front-end
 
 ### How to start? And important commands
 - After cloning the repository run `npm install` in the CLI
 - To run react.js localy run `npm start` in the CLI
 - To run the linter run `npm run lint` in the CLI
 
-## 5. GitHub CI/CD Pipeline
+## 5. Support FaaS
+
+For the support functionallity there is a FaaS (function as a service) deployed in the Azure cloud.  
+This service is responsible for support tickets that users can create if they have a problem or question.
+
+## 6. GitHub CI/CD Pipeline
 
 In each GitHub repository there is CI/CD pipeline that runs serveral checks. 
 
@@ -61,14 +66,16 @@ Otherwise contact a senior developer of the project.
 
 To merge the code to the main branche at least one review is needed.
 
-## 6. Kubernetes Deployment
+## 7. Kubernetes Deployment
 
 As this project uses microserivces it's also utilizing the service of kubernetes.  
 There is a repository `coin-vault-kubernetes` where all the kubernetes files are stored.  
 
 If you want to run the full system in production the only thing you need to do is start-up docker with kubernetes and apply all the kubernetes deployment files with `kubectl apply -f {filename.yaml}`
 
-## 7. Cloud Services
+## 78 Cloud Services
 
 Which services are in the cloud:
 - RabbitMQ running at [CloudAMQP](https://www.cloudamqp.com/)
+- MSSQL database running at [Azure](https://azure.microsoft.com/)
+- Support FaaS running at [Azure](https://azure.microsoft.com/)
