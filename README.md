@@ -73,9 +73,22 @@ There is a repository `coin-vault-kubernetes` where all the kubernetes files are
 
 If you want to run the full system in production the only thing you need to do is start-up docker with kubernetes and apply all the kubernetes deployment files with `kubectl apply -f {filename.yaml}`
 
-## 78 Cloud Services
+## 8. Security
+
+With this kind of project security is really inportant.  
+All of the API's use JWT token for authorization.  
+Auth0 is used for the authentication
+
+When wokring on the project please keep in mind the security aspect.
+
+## 9. Cloud Services
 
 Which services are in the cloud:
 - RabbitMQ running at [CloudAMQP](https://www.cloudamqp.com/)
 - MSSQL database running at [Azure](https://azure.microsoft.com/)
 - Support FaaS running at [Azure](https://azure.microsoft.com/)
+
+## 10. Contact
+
+With this guide new developers to the project can hopefully start quickly.  
+If there are still questions ask a senior developer of the project.
