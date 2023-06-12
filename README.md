@@ -29,12 +29,46 @@ The programming language used is C# .NET Core 7.0
 
 ## 3. Portfolio Microservice
 
-## 4. React.js front end
+As the name of this microservice suggests this API services handles the portfolio's.  
+The programming language used is C# .NET Core 7.0
+
+### How to start? And important commands
+- To run the API localy run `dotnet run` in the CLI
+- To run the linter run `dotnet format` in the CLI
+
+## 4. React.js front-end
+
+### How to start? And important commands
+- After cloning the repository run `npm install` in the CLI
+- To run react.js localy run `npm start` in the CLI
+- To run the linter run `npm run lint` in the CLI
 
 ## 5. GitHub CI/CD Pipeline
 
-## 6. Kubernetes deployment
+In each GitHub repository there is CI/CD pipeline that runs serveral checks. 
+
+For the C# .NET core API's: 
+- Sonarcloud (Securtity checks, code coverage tests & code smells)
+- SuperLinter (Runs the `dotnet format` checks linter)
+- Build (Full build of the application)
+- Tests (Unit/Intergration tests)
+
+When all checks succeeds a Docker image is created an pushed to Docker Hub. 
+
+If a tests fails check if you run al the important commands above for the C# API.
+
+Otherwise contact a senior developer of the project.
+
+To merge the code to the main branche at least one review is needed.
+
+## 6. Kubernetes Deployment
 
 As this project uses microserivces it's also utilizing the service of kubernetes.  
 There is a repository `coin-vault-kubernetes` where all the kubernetes files are stored.  
+
 If you want to run the full system in production the only thing you need to do is start-up docker with kubernetes and apply all the kubernetes deployment files with `kubectl apply -f {filename.yaml}`
+
+## 7. Cloud Services
+
+Which services are in the cloud:
+- RabbitMQ running at [CloudAMQP](https://www.cloudamqp.com/)
